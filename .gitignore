@@ -1,0 +1,11 @@
+/target
+**/*.rs.bk
+Cargo.lock
+bin/
+pkg/
+wasm-pack.log
+.appveyor.yml
+.travis.yml
+LICENSE_APACHE
+LICENSE_MIT
+.github/dependabot.yml
