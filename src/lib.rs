@@ -5,11 +5,11 @@ use image::imageops;
  
 use wasm_bindgen::prelude::*;
 
-//use 'wee_alloc' when feature is enabled
-#[cfg(feature = 'wee_alloc')]
-#[global_allocator]
-static ALLOC: wee_alloc::WeeAlloc = 
-    wee_alloc::WeeAlloc::INIT;
+// //use 'wee_alloc' when feature is enabled
+// #[cfg(feature = 'wee_alloc')]
+// #[global_allocator]
+// static ALLOC: wee_alloc::WeeAlloc = 
+//     wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
 pub fn shrink_by_half(og_img: Vec<u8>, width: u32, height: u32) ->
