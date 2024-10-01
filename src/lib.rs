@@ -1,8 +1,7 @@
 mod utils;
 
-use image::{RgbaImage};
-use image::imageops;
- 
+use image::{RgbaImage, imageops};
+
 use wasm_bindgen::prelude::*;
 
 // //use 'wee_alloc' when feature is enabled
