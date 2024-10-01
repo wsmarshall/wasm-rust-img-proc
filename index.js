@@ -22,8 +22,8 @@ function setup(event) {
         })
       })
 
-        const shrink_button = document.getElementById('shrink')
-        shrink_button.addEventListener('click', function(event) {
+    const shrink_button = document.getElementById('shrink')
+    shrink_button.addEventListener('click', function(event) {
             const canvas = document.getElementById('preview')
             const canvas_context = canvas.getContext('2d')
             const img_buffer = canvas_context.getImageData(0, 0, canvas.width, canvas.height).data 
@@ -31,10 +31,10 @@ function setup(event) {
             const output_buffer = wasmImage.shrink_by_half(img_buffer, canvas.width, canvas.height)
 
             const u8OutputBuffer = new ImageData(
-                new Uint8ClampedArray(outputBuffer), canvas.width / 2)
+                new Uint8ClampedArray(output_buffer), canvas.width / 2)
                 
                 //clear the canvas 
-                canvasContext.clearRect(
+                canvas_context.clearRect(
                 0, 0, canvas.width, canvas.height);
 
                 //set canvas size to new smaller dimension
@@ -42,7 +42,7 @@ function setup(event) {
                 canvas.height = canvas.height / 2
 
                 //display new image
-                canvasContext.putImageData(u8OutputBuffer, 0, 0)
+                canvas_context.putImageData(u8OutputBuffer, 0, 0)
         })
     }
 
